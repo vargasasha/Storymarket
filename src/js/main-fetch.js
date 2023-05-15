@@ -18,6 +18,7 @@ export async function getBookById(id) {
   return (await axios.get(`${BASE_URL}${id}`)).data;
 }
 
+
 // getCategoriesList().then(function (response) {
 //   console.log(response);
 // });
