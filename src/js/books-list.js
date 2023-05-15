@@ -1,8 +1,14 @@
 import { getBookByCategory } from './main-fetch';
 
 const list = document.querySelector('.js-list');
+const listCategory = document.querySelector('.categories-list');
 
-const selectedCategory = 'Audio Fiction';
+listCategory.addEventListener('click', handlerAllCategoryBooks);
+
+function handlerAllCategoryBooks(evt) {
+    evt.preventDefault();
+    categoryBooks(evt.target.textContent);
+}
 
 function cardMarkup(array) {
   return array
@@ -22,5 +28,3 @@ function categoryBooks(category) {
 
   });
 }
-
-categoryBooks(selectedCategory);
