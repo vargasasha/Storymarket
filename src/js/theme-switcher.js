@@ -9,7 +9,7 @@ changeThemeButtons.forEach(button => {
 
 
 function applyTheme(themeName) {
-    document.querySelector('[title="theme"]').setAttribute('href', `../sass/utils/_theme-${themeName}.scss`);
+    document.querySelector('[title="theme"]').setAttribute('href', `sass/utils/_theme-${themeName}.scss`);
     changeThemeButtons.forEach(button => {
         button.style.display = 'block';
     });
