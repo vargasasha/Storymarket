@@ -1,0 +1,67 @@
+// Скдає базові властивості посилань та списків
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Властивості для зображень
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Глобальні стилі 
+
+body {
+    font-family: 'DM Sans';
+    padding: 0;
+    margin: 0;
+    overflow: overlay;
+    background-color: $bgr-color;
+}
+
+.container {
+    max-width: $mobile;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet) {
+        max-width: $tablet;
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: $desktop;
+        padding: 0 24px;
+    }
+}
+
+.main-container {
+    padding-top: 110px;
+
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        gap: 40px;
+    }
+}
