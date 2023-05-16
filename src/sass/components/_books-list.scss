@@ -1,3 +1,35 @@
+.category-books-section {
+
+    max-width: 335px;
+
+@media screen and (min-width: $tablet) {
+    max-width: 704px;
+  }
+
+  @media screen and (min-width: $desktop) {
+     max-width: 996px;
+  }
+
+   
+}
+
+
+.js-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 40px;
+  }
+}
+
 .category-title-begin {
   font-family: 'DM Sans';
   font-style: normal;
@@ -31,6 +63,14 @@
 
 .category-item {
   margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 50px) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 96px) / 5);
+  }
 }
 
 .book-card-wrap {
