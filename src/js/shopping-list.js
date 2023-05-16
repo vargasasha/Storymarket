@@ -20,6 +20,9 @@ const drawList = async () => {
     `;
     return;
   }
+  const amazonImg = document.querySelector('.amazon-link').getAttribute('src');
+  const pageImg = document.querySelector('.page-link').getAttribute('src');
+  const bookImg = document.querySelector('.book-link').getAttribute('src');
 
   const dynamicElements = data[0].books
     .slice(0, 3)
@@ -27,13 +30,13 @@ const drawList = async () => {
       const links = `
         <div class="shopping-links">
           <a href="${buy_links[0].url}" rel="noopener noreferrer">
-            <img class="amazon-link" src="./images/shopping-list/amazon.png" alt="name" />
+            <img class="amazon-link" src="${amazonImg}" alt="name" />
           </a>
           <a href="${buy_links[1].url}" rel="noopener noreferrer">
-            <img class="page-link" src="./images/shopping-list/out.png" alt="page" />
+            <img class="page-link" src="${pageImg}" alt="page" />
           </a>
           <a href="${buy_links[2].url}" rel="noopener noreferrer">
-            <img class="book-link" src="./images/shopping-list/book.png" alt="book" />
+            <img class="book-link" src="${bookImg}" alt="book" />
           </a>
         </div>
       `;
@@ -44,6 +47,7 @@ const drawList = async () => {
             <img class="img-cover" src="${book_image}" alt="${title}" />
           </div>
           <div class="shopping-content">
+          
             <button class="remove-button">
               <svg class="remove-icon" width="12" height="12">
                 <use href="./images/shopping-list/remove.svg#icon-Icon"></use>
