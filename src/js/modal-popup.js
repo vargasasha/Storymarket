@@ -38,7 +38,6 @@ function createMarkupModal({ book_image, title, description, _id }) {
       </p>
       <ul class="book-add__btn">
         <li><button class="book-add__watched modal-book__btn" id=${_id}>add to Watched</button></li>
-        <li><button class="book-add__queue modal-book__btn" id=${_id}>add to Queue</button></li>
       </ul>
     </div>
   </div>
