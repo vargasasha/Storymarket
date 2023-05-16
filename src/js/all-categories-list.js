@@ -1,30 +1,49 @@
 import { getTopBooks } from './main-fetch';
 
-const allBooks = document.querySelector('.all-categories');
+const allBooks = document.querySelector('.best-sellers');
+let bookSize = getBookSize();
 
 getTopBooks().then(function (response) {
   console.log('top book', response);
   allBooks.innerHTML = renderMarkup(response);
 });
 
+window.addEventListener('resize', function () {
+  bookSize = getBookSize();
+  allBooks.innerHTML = renderMarkup(response);
+});
+
+function getBookSize() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth >= 1024) {
+    return 5; // Великий розмір книжки
+  } else if (screenWidth >= 768) {
+    return 3; // Середній розмір книжки
+  } else {
+    return 1; // Малий розмір книжки
+  }
+}
+
 function renderMarkup(data) {
   const renderedItems = data.map(obj => {
-    const innerMarkup = obj.books.map(book => {
+    const slicedBooks = obj.books.slice(0, bookSize); // Обрізання кількості книг
+    const innerMarkup = slicedBooks.map(book => {
       return `
-      <li class="best-sellers-item">
+      <li class="best-sellers__item">
         <img src="${book.book_image}" alt="" />
-        <h3 class="best-sellers-name">${book.title}</h3>
-        <p class="best-sellers-author">${book.author}</p>
+        <h3 class="best-sellers__name">${book.title}</h3>
+        <p class="best-sellers__author">${book.author}</p>
       </li>
     `;
     });
     const mergedInnerMarkup = innerMarkup.join('');
-    return `<div>
-              <p> ${obj.list_name}</p>
-              <ul class="best-sellers-list">
+    return `<div class="best-sellers__container">
+              <p class="best-sellers__categori"> ${obj.list_name}</p>
+              <ul class="best-sellers__list">
               ${mergedInnerMarkup}
               </ul>
-              <button>see more</button>
+              <button class="best-sellers__button">see more</button>
             </div>`;
   });
   const finalMarkup = renderedItems.join('');
