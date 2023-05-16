@@ -1,3 +1,8 @@
 @import './common';
-@import './example';
+@import './utils/index';
+@import './base/global-styles';
+@import './components/categories';
+@import './base/fonts';
+@import './components/books-list';
 @import './shopping-list';
+
