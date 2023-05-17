@@ -49,9 +49,9 @@ const drawList = async () => {
           <div class="shopping-content">
           
             <button class="remove-button">
-              <svg class="remove-icon" width="12" height="12">
-                <use href="./images/shopping-list/remove.svg#icon-Icon"></use>
-              </svg>
+              <svg class="remove-icon">
+              <use href="./images/shopping-list/sprite.svg#icon-Icon"></use>
+            </svg>
             </button>
             <div>
               <h2 class="shopping-title">${title}</h2>

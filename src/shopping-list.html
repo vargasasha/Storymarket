@@ -6,90 +6,61 @@
     <link rel="icon" type="image/png" href="./images/favicon.png" />
     <title>Shopping List</title>
     <link rel="stylesheet" href="./sass/index.scss" />
+    <!-- <link
+      rel="basket icon"
+      type="image/x-icon"
+      href="images/shopping-list/sprite.svg"
+    /> -->
     <script type="module" src="./index.js"></script>
-    </head>
+  </head>
   <body>
-     <include src="./partials/header.html"></include>
+    <include src="./partials/header.html"></include>
     <main>
-<div class="support-shopping">
-      <div class="support-list"></div>
       <div class="container-shopping">
         <h1 class="main-title">Shopping <span class="log-list">List</span></h1>
         <ul class="shopping-list">
           <li class="shopping-card">
-            <div class="shopping-cover">
-              <img
-                class="img-cover"
-                src="./images/shopping-list/harlan.png"
-                alt="harlan"
-              />
-            </div>
-            <div class="shopping-content">
-              <button class="remove-button">
-                <svg class="remove-icon" width="12" height="12">
-                  <use href="./images/shopping-list/remove.svg#icon-Icon"></use>
-                </svg>
-              </button>
-              <div>
-                <h2 class="shopping-title">I will find you</h2>
-                <p class="shopping-category">Hardcover fiction</p>
-                <p class="shopping-description">
-                  David Burroughs was once a devoted father to his
-                  three-year-old son Matthew, living a dream life just a short
-                  drive away from the working-class suburb where he and his
-                  wife, Cheryl, first fell in love--until one fateful night when
-                  David woke suddenly to discover Matthew had been murdered
-                  while David was asleep just down the hall.
-                </p>
-              </div>
-              <div class="shopping-footer">
-                <p class="shopping-author">Harlan Coben</p>
-                <div class="shopping-links">
-                  <a href="https://www.amazon.com"
-                    ><img
-                      class="amazon-link"
-                      src="./images/shopping-list/amazon.png"
-                      alt="name"
-                  /></a>
-                  <a href=""
-                    ><img
-                      class="page-link"
-                      src="./images/shopping-list/out.png"
-                      alt="page"
-                  /></a>
-                  <a href=""
-                    ><img
-                      class="book-link"
-                      src="./images/shopping-list/book.png"
-                      alt="book"
-                  /></a>
-                </div>
-              </div>
+            <button class="remove-button">
+              <svg class="remove-icon" width="12" height="12">
+                <use href="./images/shopping-list/sprite.svg#icon-Icon"></use>
+              </svg>
+            </button>
+
+            <div class="shopping-links">
+              <a href="https://www.amazon.com"
+                ><img
+                  class="amazon-link"
+                  src="./images/shopping-list/amazon.png"
+                  alt="name"
+              /></a>
+              <a href=""
+                ><img
+                  class="page-link"
+                  src="./images/shopping-list/out.png"
+                  alt="page"
+              /></a>
+              <a href=""
+                ><img
+                  class="book-link"
+                  src="./images/shopping-list/book.png"
+                  alt="book"
+              /></a>
             </div>
           </li>
-          <!-- <button class="remove-button">Видалити з Shopping list</button> -->
         </ul>
       </div>
-    </div>
-    <div class="support-empty">
-      <div class="support-list"></div>
-      <div class="container-empty">
-        <h1 class="empty-title">
-          Shopping <span class="empty-list">List</span>
-        </h1>
-        <div class="page-empty">
-          <h2 class="empty-description">
-            This page is empty, add some books and proceed to order.
-          </h2>
-          <img
-            class="img-empty"
-            src="./images/shopping-list/books.png"
-            alt="books"
-          />
-        </div>
+
+      <h1 class="empty-title">Shopping <span class="empty-list">List</span></h1>
+      <div class="page-empty">
+        <h2 class="empty-description">
+          This page is empty, add some books and proceed to order.
+        </h2>
+        <img
+          class="img-empty"
+          src="./images/shopping-list/books.png"
+          alt="books"
+        />
       </div>
-    </div>
     </main>
-    
   </body>
 </html>
