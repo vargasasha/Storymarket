@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: $bgr-color-dark;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #E0E0E0;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+
+.dark-theme body::-webkit-scrollbar-track {
+    background: #000000;
+}
