@@ -4,11 +4,16 @@ const list = document.querySelector('.js-list');
 const categoryTitle = document.querySelector('.js-category-books-title');
 const listCategory = document.querySelector('.categories-list');
 
+console.log(listCategory);
 
 listCategory.addEventListener('click', handlerAllCategoryBooks);
 
-function handlerAllCategoryBooks(evt) {
+export function handlerAllCategoryBooks(evt) {
   evt.preventDefault();
+
+  allBooksTitle.textContent = '';
+  allBooks.innerHTML = '';
+
   categoryBooks(evt.target.textContent);
 }
 
@@ -38,11 +43,9 @@ function titleMarkup(title) {
   const firstTitle = wordArray.slice(0, wordArray.length - 1).join(' ') + ' ';
 
   categoryTitle.innerHTML = `<h2 class="category-title-begin">${firstTitle}<span class="category-title-end">${lastWord}</span></h2>`;
-
 }
 
 function categoryBooks(category) {
-
   titleMarkup(category);
 
   getBookByCategory(category).then(arr => {
