@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <title>Shopping List</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <!-- <link
       rel="basket icon"
@@ -11,69 +12,55 @@
       href="images/shopping-list/sprite.svg"
     /> -->
     <script type="module" src="./index.js"></script>
-    <script type="module" src="./js/shopping-list.js"></script>
-    <script>
-      // 1.
-    </script>
   </head>
   <body>
-    <div class="container-shopping">
-      <h1 class="main-title">Shopping <span class="log-list">List</span></h1>
-      <ul class="shopping-list">
-        <li class="shopping-card">
-          <button class="remove-button">
-            <svg class="remove-icon" width="12" height="12">
-              <use href="./images/shopping-list/sprite.svg#icon-Icon"></use>
-            </svg>
-          </button>
+    <include src="./partials/header.html"></include>
+    <main>
+      <div class="container-shopping">
+        <h1 class="main-title">Shopping <span class="log-list">List</span></h1>
+        <ul class="shopping-list">
+          <li class="shopping-card">
+            <button class="remove-button">
+              <svg class="remove-icon" width="12" height="12">
+                <use href="./images/shopping-list/sprite.svg#icon-Icon"></use>
+              </svg>
+            </button>
 
-          <div class="shopping-links">
-            <a href="https://www.amazon.com"
-              ><img
-                class="amazon-link"
-                src="./images/shopping-list/amazon.png"
-                alt="name"
-            /></a>
-            <a href=""
-              ><img
-                class="page-link"
-                src="./images/shopping-list/out.png"
-                alt="page"
-            /></a>
-            <a href=""
-              ><img
-                class="book-link"
-                src="./images/shopping-list/book.png"
-                alt="book"
-            /></a>
-          </div>
-        </li>
-      </ul>
-    </div>
+            <div class="shopping-links">
+              <a href="https://www.amazon.com"
+                ><img
+                  class="amazon-link"
+                  src="./images/shopping-list/amazon.png"
+                  alt="name"
+              /></a>
+              <a href=""
+                ><img
+                  class="page-link"
+                  src="./images/shopping-list/out.png"
+                  alt="page"
+              /></a>
+              <a href=""
+                ><img
+                  class="book-link"
+                  src="./images/shopping-list/book.png"
+                  alt="book"
+              /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <h1 class="empty-title">Shopping <span class="empty-list">List</span></h1>
-    <div class="page-empty">
-      <h2 class="empty-description">
-        This page is empty, add some books and proceed to order.
-      </h2>
-      <img
-        class="img-empty"
-        src="./images/shopping-list/books.png"
-        alt="books"
-      />
-    </div>
-
-    <!--
-      ❗️❗️❗️
-      Add
-      partials
-      like
-      so
-      for
-      every
-      page
-      --
-    />
-    <!-- <include src="./partials/example.html"></include> -->
+      <h1 class="empty-title">Shopping <span class="empty-list">List</span></h1>
+      <div class="page-empty">
+        <h2 class="empty-description">
+          This page is empty, add some books and proceed to order.
+        </h2>
+        <img
+          class="img-empty"
+          src="./images/shopping-list/books.png"
+          alt="books"
+        />
+      </div>
+    </main>
   </body>
 </html>
