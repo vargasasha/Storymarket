@@ -36,7 +36,7 @@ export const charityItems = [
   },
   {
     title: 'World vision',
-    url: 'https://www.wvi.org/emergencies/ukraine',
+    url: 'https://www.wvi.org/emergencies/ukraine/',
     img: 'https://www.wvi.org/themes/custom/wvi_2018/logo.svg',
   },
   {
