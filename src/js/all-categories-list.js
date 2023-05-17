@@ -1,4 +1,5 @@
 import { getTopBooks } from './main-fetch';
+import { currentCategoryChange } from './current-category';
 
 const allBooks = document.querySelector('.best-sellers');
 let bookSize = getBookSize();
@@ -25,7 +26,7 @@ function getBookSize() {
   }
 }
 
-function renderMarkup(data) {
+  function renderMarkup(data) {
   const renderedItems = data.map(obj => {
     const slicedBooks = obj.books.slice(0, bookSize); // Обрізання кількості книг
     const innerMarkup = slicedBooks.map(book => {

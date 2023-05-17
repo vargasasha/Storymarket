@@ -1,4 +1,5 @@
 import { getBookByCategory } from './main-fetch';
+import { currentCategoryChange } from './current-category';
 
 const list = document.querySelector('.js-list');
 const categoryTitle = document.querySelector('.js-category-books-title');
@@ -45,7 +46,7 @@ function titleMarkup(title) {
   categoryTitle.innerHTML = `<h2 class="category-title-begin">${firstTitle}<span class="category-title-end">${lastWord}</span></h2>`;
 }
 
-function categoryBooks(category) {
+ function categoryBooks(category) {
   titleMarkup(category);
 
   getBookByCategory(category).then(arr => {
