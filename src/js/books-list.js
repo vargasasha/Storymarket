@@ -4,8 +4,6 @@ const list = document.querySelector('.js-list');
 const categoryTitle = document.querySelector('.js-category-books-title');
 const listCategory = document.querySelector('.categories-list');
 
-console.log(listCategory);
-
 listCategory.addEventListener('click', handlerAllCategoryBooks);
 
 export function handlerAllCategoryBooks(evt) {
