@@ -4,7 +4,7 @@ const allBooks = document.querySelector('.best-sellers');
 let bookSize = getBookSize();
 
 getTopBooks().then(function (response) {
-  console.log('top book', response);
+  // console.log('top book', response);
   allBooks.innerHTML = renderMarkup(response);
 });
 
