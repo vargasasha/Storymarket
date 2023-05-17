@@ -3,11 +3,20 @@ import { getBookByCategory } from './main-fetch';
 const list = document.querySelector('.js-list');
 const categoryTitle = document.querySelector('.js-category-books-title');
 const listCategory = document.querySelector('.categories-list');
+const allBooks = document.querySelector('.best-sellers');
+const allBooksTitle = document.querySelector('.best-sellers-title');
 
 listCategory.addEventListener('click', handlerAllCategoryBooks);
 
 export function handlerAllCategoryBooks(evt) {
   evt.preventDefault();
+
+  if (
+    evt.target.nodeName !== 'A' ||
+    evt.target.textContent === 'All category'
+  ) {
+    return;
+  }
 
   allBooksTitle.textContent = '';
   allBooks.innerHTML = '';
