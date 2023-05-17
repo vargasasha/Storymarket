@@ -3,16 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
     <title>Shopping List</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
-    <script type="module" src="./js/shopping-list.js"></script>
-    <script>
-      // 1.
-    </script>
-  </head>
+    </head>
   <body>
-    <div class="support-shopping">
+     <include src="./partials/header.html"></include>
+    <main>
+<div class="support-shopping">
       <div class="support-list"></div>
       <div class="container-shopping">
         <h1 class="main-title">Shopping <span class="log-list">List</span></h1>
@@ -90,7 +89,7 @@
         </div>
       </div>
     </div>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!-- <include src="./partials/example.html"></include> -->
+    </main>
+    
   </body>
 </html>
