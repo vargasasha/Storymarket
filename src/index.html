@@ -3,14 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <title>Story Market</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-   
+
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-
-     <script type="module" src="./index.js"></script>
+    <include src="./partials/header.html"></include>
+    <main>
+      <div class="main">
+        <div class="container main-container">
+          <div class="flex-wrap">
+          <include src="./partials/category-bar.html"></include>
+          <include src="./partials/support-bar.html"></include>
+          </div>
+          <include src="./partials/books-list.html"></include>
+          <include src="./partials/all-categories-list.html"></include>
+        </div>
+      </div>
+    </main>
+    <include src="./partials/modal-popup.html"></include>
   </body>
 </html>
