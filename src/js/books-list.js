@@ -9,7 +9,7 @@ const allBooksTitle = document.querySelector('.best-sellers-title');
 listCategory.addEventListener('click', handlerAllCategoryBooks);
 
 export function handlerAllCategoryBooks(evt) {
-  evt.preventDefault();
+  // evt.preventDefault();
 
   if (
     evt.target.nodeName !== 'A' ||
