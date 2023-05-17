@@ -16,11 +16,11 @@ window.addEventListener('resize', function () {
 function getBookSize() {
   const screenWidth = window.innerWidth;
 
-  if (screenWidth >= 1024) {
+  if (screenWidth >= 1440) {
     return 5; // Великий розмір книжки
   } else if (screenWidth >= 768) {
     return 3; // Середній розмір книжки
-  } else {
+  } else if (screenWidth >= 375) {
     return 1; // Малий розмір книжки
   }
 }
@@ -31,7 +31,7 @@ function renderMarkup(data) {
     const innerMarkup = slicedBooks.map(book => {
       return `
       <li class="best-sellers__item">
-        <img src="${book.book_image}" alt="" />
+        <img class="best-sellers__img" src="${book.book_image}" alt="" />
         <h3 class="best-sellers__name">${book.title}</h3>
         <p class="best-sellers__author">${book.author}</p>
       </li>
@@ -43,7 +43,9 @@ function renderMarkup(data) {
               <ul class="best-sellers__list">
               ${mergedInnerMarkup}
               </ul>
-              <button class="best-sellers__button">see more</button>
+              <div class="button-conteiner">
+              <button class="best-sellers-button">see more</button>
+              </div>
             </div>`;
   });
   const finalMarkup = renderedItems.join('');
