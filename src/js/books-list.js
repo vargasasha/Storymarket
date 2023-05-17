@@ -20,9 +20,9 @@ function cardMarkup(array) {
         <a href="">
           <div class="book-card-wrap">
             <img src="${book_image}" alt="${title}" />
-            <p class="card-up-text"></p>
+            <p class="card-up-text">quick view</p>
           </div>
-          <div>
+         
             <h3 class="book-card-title">${title}</h3>
             <p class="book-card-author">${author}</p>
           </div>
