@@ -3,16 +3,16 @@
   margin-left: auto;
   margin-right: auto;
   // max-width: 375px;
-  height: 1020px;
-  @media screen and (min-width: 768px) {
-    // max-width: 768px;
-    height: 1007px;
-  }
+  // height: 1020px;
+  // @media screen and (min-width: 768px) {
+  //   // max-width: 768px;
+  //   height: 1007px;
+  // }
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
-    margin: 0;
+    margin-top: 30px;
     padding: 0;
-    margin-left: 40px;
+    // margin-left: 40px;
   }
 }
 .main-title {
@@ -234,12 +234,12 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: 812px;
+  // height: 812px;
   @media screen and (min-width: 768px) {
-    height: 1007px;
+    // height: 1007px;
   }
   @media screen and (min-width: 1440px) {
-    height: 770px;
+    // height: 770px;
   }
 }
 .empty-title {

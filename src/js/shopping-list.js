@@ -24,7 +24,7 @@ const drawList = async () => {
   const pageImg = document.querySelector('.page-link').getAttribute('src');
   const bookImg = document.querySelector('.book-link').getAttribute('src');
 
-  const dynamicElements = data[0].books
+  const dynamicElements = data[0].books.length? data[0].books
     .slice(0, 3)
     .map(({ title, author, book_image, description, buy_links, list_name }) => {
       const links = `
@@ -47,7 +47,7 @@ const drawList = async () => {
             <img class="img-cover" src="${book_image}" alt="${title}" />
           </div>
           <div class="shopping-content">
-          
+
             <button class="remove-button">
               <svg class="remove-icon">
               <use href="./images/shopping-list/sprite.svg#icon-Icon"></use>
@@ -66,7 +66,16 @@ const drawList = async () => {
         </li>
       `;
     })
-    .join('');
+    .join('') :  `<div class="page-empty">
+        <h2 class="empty-description">
+          This page is empty, add some books and proceed to order.
+        </h2>
+        <img
+          class="img-empty"
+          src="./images/shopping-list/books.png"
+          alt="books"
+        />
+      </div>`;
 
   container.innerHTML = dynamicElements;
 
