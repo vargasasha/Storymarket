@@ -7,12 +7,19 @@ const drawList = async () => {
   const data = await getTopBooks();
   //const data = JSON.parse(localStorage.getItem('shopping-list'));
 
-
-
-  const dynamicElements = data[0].books.length ? data[0].books
-    .slice(0, 3)
-    .map(({ title, author, book_image, description, buy_links, list_name }) => {
-      const links = `
+  const dynamicElements = data[0].books.length
+    ? data[0].books
+        .slice(0, 3)
+        .map(
+          ({
+            title,
+            author,
+            book_image,
+            description,
+            buy_links,
+            list_name,
+          }) => {
+            const links = `
         <div class="shopping-links">
           <a href="${buy_links[0].url}" rel="noopener noreferrer">
             <img class="amazon-link" src="${require('../images/shopping-list/amazon.png')}" alt="name" />
@@ -26,7 +33,7 @@ const drawList = async () => {
         </div>
       `;
 
-      return `
+            return `
         <li class="shopping-card">
           <div class="shopping-cover">
             <img class="img-cover" src="${book_image}" alt="${title}" />
@@ -49,8 +56,10 @@ const drawList = async () => {
           </div>
         </li>
       `;
-    })
-    .join('') :  `<li class="page-empty">
+          }
+        )
+        .join('')
+    : `<li class="page-empty">
         <h2 class="empty-description">
           This page is empty, add some books and proceed to order.
         </h2>
@@ -61,9 +70,14 @@ const drawList = async () => {
         />
       </li>`;
 
-      console.log("🚀 ~ file: shopping-list.js:81 ~ drawList ~ dynamicElements:", dynamicElements)
+  console.log(
+    ' ~ file: shopping-list.js:81 ~ drawList ~ dynamicElements:',
+    dynamicElements
+  );
   container.innerHTML = dynamicElements;
 
+  console.clear();
+  
   const removeButtons = document.querySelectorAll('.remove-button');
   removeButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
