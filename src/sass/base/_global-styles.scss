@@ -32,10 +32,15 @@ img {
 // Глобальні стилі
 
 body {
-    padding: 0;
-    margin: 0;
-    overflow: overlay;
-    background-color: $bgr-color;
+    display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        // font-family: 'DM Sans';
+        padding: 0;
+        margin: 0;
+        overflow: overlay;
+        background-color: $bgr-color;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -57,7 +62,6 @@ body {
 }
 
 .main-container {
-    padding-top: 110px;
 
     @media screen and (min-width: 1440px) {
         display: flex;
@@ -68,4 +72,13 @@ body {
 
 .w-full {
     width: 100%;
+}
+.aside {
+    padding-top: 40px;
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+        display: flex;
+        justify-content: space-between;
+        
+    }
 }
