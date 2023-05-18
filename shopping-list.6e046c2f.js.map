@@ -1,0 +1,1 @@
+{"mappings":"gfAAAA,EAAA,S","sources":["src/shopping-list.js"],"sourcesContent":["import '../src/js/shopping-list';\nimport '../src/js/support-bar';"],"names":["parcelRequire"],"version":3,"file":"shopping-list.6e046c2f.js.map"}
