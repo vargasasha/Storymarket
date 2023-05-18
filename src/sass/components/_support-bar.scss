@@ -21,7 +21,7 @@
     gap: 12px;
     margin-bottom: 40px;
     margin-top: 0;
-    font-family: 'DM Sans';
+    font-family: inherit;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -30,6 +30,8 @@
     color: #ffffff;
     fill: #ffffff;
   }
+
+
 
   &__list-box {
     overflow: hidden;
@@ -48,7 +50,7 @@
   }
 
   &__item {
-    font-family: 'DM Sans';
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -120,3 +122,13 @@
 // .support__item:not(:last-child) {
 //     margin-bottom: 20px;
 // }
+
+  .support__title {
+font-family: inherit;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 1.14;
+letter-spacing: -0.04em;
+color: #FFFFFF;
+  }
