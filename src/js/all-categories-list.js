@@ -30,7 +30,7 @@ function renderMarkup(data) {
     const slicedBooks = obj.books.slice(0, bookSize); // Обрізання кількості книг
     const innerMarkup = slicedBooks.map(book => {
       return `
-      <li class="best-sellers__item">
+      <li class="best-sellers__item js-modal-item" id="${book._id}">
         <img class="best-sellers__img" src="${book.book_image}" alt="" />
         <h3 class="best-sellers__name">${book.title}</h3>
         <p class="best-sellers__author">${book.author}</p>

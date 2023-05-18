@@ -38,7 +38,7 @@ function cardMarkup(array) {
   return array
     .map(
       ({ book_image, title, author, _id }) =>
-        `<li class="category-item" id="${_id}">
+        `<li class="category-item js-modal-item" id="${_id}">
         <a href="">
           <div class="book-card-wrap">
             <img src="${book_image}" alt="${title}" />
