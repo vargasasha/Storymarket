@@ -31,8 +31,9 @@ async function onOpenModal(event) {
 function createMarkupModal({ book_image, title, description, _id }) {
   const markup = mark();
   function mark() {
-    return `               
-<div class="book-card__modal" data-modal>
+    return ` 
+    <div class="modal-content"> 
+    <div class="book-card__modal" data-modal>
    <button class="book-card__close modal-book__btn" data-modal-close>X</button>
   <img
     class="book-card__img"
@@ -46,12 +47,12 @@ function createMarkupModal({ book_image, title, description, _id }) {
       <p class="book-card__desc">
        ${description}
       </p>
-      <ul class="book-add__btn">
-        <li><button class="book-add__watched modal-book__btn" id=${_id}>add to Watched</button></li>
-      </ul>
     </div>
   </div>
-  
+  <ul class="book-add__btn">
+        <li><button class="book-add__watched modal-book__btn" id=${_id}>add to Watched</button></li>
+      </ul>
+   </div>           
 `;
   }
 
