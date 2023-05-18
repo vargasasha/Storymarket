@@ -3,13 +3,23 @@ import { getBookById } from './main-fetch';
 const modalBackdropEl = document.querySelector('.modal-backdrop');
 const modalContainerEl = document.querySelector('.modal-container');
 const bookListEl = document.querySelector('.js-list');
+const allBooksCategory = document.querySelector('.best-sellers');
 
 bookListEl.addEventListener('click', onOpenModal);
+allBooksCategory.addEventListener('click', onOpenModal);
 
 async function onOpenModal(event) {
   event.preventDefault();
+
+
   // if (event.target.nodeName !== 'IMG') return;
-  const bookId = event.target.closest('.category-item').id;
+  let bookId;
+
+  if (event.target.closest('.js-modal-item').id) {
+    bookId = event.target.closest('.js-modal-item').id;
+   
+  } 
+
   try {
     const bookData = await getBookById(bookId);
     createMarkupModal(bookData);
