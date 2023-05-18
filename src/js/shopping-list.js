@@ -76,6 +76,8 @@ const drawList = async () => {
   );
   container.innerHTML = dynamicElements;
 
+  console.clear();
+  
   const removeButtons = document.querySelectorAll('.remove-button');
   removeButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
