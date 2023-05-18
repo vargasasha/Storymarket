@@ -9,14 +9,13 @@ const allBooksTitle = document.querySelector('.best-sellers-title');
 listCategory.addEventListener('click', handlerAllCategoryBooks);
 
 export function handlerAllCategoryBooks(evt) {
-  // evt.preventDefault();
-
   if (
     evt.target.nodeName !== 'A' ||
     evt.target.textContent === 'All category'
   ) {
     return;
   }
+  evt.preventDefault();
 
   allBooksTitle.textContent = '';
   allBooks.innerHTML = '';
