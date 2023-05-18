@@ -7,6 +7,17 @@ const allBooks = document.querySelector('.best-sellers');
 const allBooksTitle = document.querySelector('.best-sellers-title');
 
 listCategory.addEventListener('click', handlerAllCategoryBooks);
+allBooks.addEventListener('click', allBooksCklick);
+
+function allBooksCklick(evt) {
+  if (evt.target.className !== 'best-sellers-button') {
+    return;
+  } else {
+    allBooksTitle.textContent = '';
+    allBooks.innerHTML = '';
+    categoryBooks(evt.target.dataset.category);
+  }
+}
 
 export function handlerAllCategoryBooks(evt) {
   // evt.preventDefault();
