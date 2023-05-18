@@ -20,11 +20,12 @@ const drawList = async () => {
     `;
     return;
   }
+
   const amazonImg = document.querySelector('.amazon-link').getAttribute('src');
   const pageImg = document.querySelector('.page-link').getAttribute('src');
   const bookImg = document.querySelector('.book-link').getAttribute('src');
 
-  const dynamicElements = data[0].books.length ? data[0].books
+  const dynamicElements = !data[0].books.length ? data[0].books
     .slice(0, 3)
     .map(({ title, author, book_image, description, buy_links, list_name }) => {
       const links = `
@@ -72,7 +73,7 @@ const drawList = async () => {
         </h2>
         <img
           class="img-empty"
-          src="./images/shopping-list/books.png"
+          src="${require('../images/shopping-list/books.png')}"
           alt="books"
         />
       </li>`;
