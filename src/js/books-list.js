@@ -6,17 +6,27 @@ const listCategory = document.querySelector('.categories-list');
 const allBooks = document.querySelector('.best-sellers');
 const allBooksTitle = document.querySelector('.best-sellers-title');
 
-listCategory?.addEventListener('click', handlerAllCategoryBooks);
+listCategory.addEventListener('click', handlerAllCategoryBooks);
+allBooks.addEventListener('click', allBooksCklick);
+
+function allBooksCklick(evt) {
+  if (evt.target.className !== 'best-sellers-button') {
+    return;
+  } else {
+    allBooksTitle.textContent = '';
+    allBooks.innerHTML = '';
+    categoryBooks(evt.target.dataset.category);
+  }
+}
 
 export function handlerAllCategoryBooks(evt) {
-  // evt.preventDefault();
-
   if (
     evt.target.nodeName !== 'A' ||
     evt.target.textContent === 'All category'
   ) {
     return;
   }
+  evt.preventDefault();
 
   allBooksTitle.textContent = '';
   allBooks.innerHTML = '';
@@ -34,7 +44,7 @@ function cardMarkup(array) {
             <img src="${book_image}" alt="${title}" />
             <p class="card-up-text">quick view</p>
           </div>
-
+         
             <h3 class="book-card-title">${title}</h3>
             <p class="book-card-author">${author}</p>
           </div>
