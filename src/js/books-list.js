@@ -6,7 +6,7 @@ const listCategory = document.querySelector('.categories-list');
 const allBooks = document.querySelector('.best-sellers');
 const allBooksTitle = document.querySelector('.best-sellers-title');
 
-listCategory.addEventListener('click', handlerAllCategoryBooks);
+listCategory?.addEventListener('click', handlerAllCategoryBooks);
 
 export function handlerAllCategoryBooks(evt) {
   evt.preventDefault();
@@ -34,7 +34,7 @@ function cardMarkup(array) {
             <img src="${book_image}" alt="${title}" />
             <p class="card-up-text">quick view</p>
           </div>
-         
+
             <h3 class="book-card-title">${title}</h3>
             <p class="book-card-author">${author}</p>
           </div>
