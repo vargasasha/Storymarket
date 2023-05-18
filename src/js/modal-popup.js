@@ -31,7 +31,7 @@ async function onOpenModal(event) {
 function createMarkupModal({ book_image, title, description, _id }) {
   const markup = mark();
   function mark() {
-    return `  
+    return ` 
     <div class="modal-content"> 
     <div class="book-card__modal" data-modal>
    <button class="book-card__close modal-book__btn" data-modal-close>X</button>
