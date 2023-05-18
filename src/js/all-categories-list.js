@@ -44,7 +44,7 @@ function renderMarkup(data) {
               ${mergedInnerMarkup}
               </ul>
               <div class="button-conteiner">
-              <button class="best-sellers-button">see more</button>
+              <button class="best-sellers-button" data-category="${obj.list_name}">see more</button>
               </div>
             </div>`;
   });
