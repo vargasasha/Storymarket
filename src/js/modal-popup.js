@@ -4,11 +4,11 @@ const modalBackdropEl = document.querySelector('.modal-backdrop');
 const modalContainerEl = document.querySelector('.modal-container');
 const bookListEl = document.querySelector('.js-list');
 
-bookListEl?.addEventListener('click', onOpenModal);
+bookListEl.addEventListener('click', onOpenModal);
 
 async function onOpenModal(event) {
   event.preventDefault();
-  if (event.target.nodeName !== 'IMG') return;
+  // if (event.target.nodeName !== 'IMG') return;
   const bookId = event.target.closest('.category-item').id;
   try {
     const bookData = await getBookById(bookId);
@@ -21,7 +21,7 @@ async function onOpenModal(event) {
 function createMarkupModal({ book_image, title, description, _id }) {
   const markup = mark();
   function mark() {
-    return `
+    return `               
 <div class="book-card__modal" data-modal>
    <button class="book-card__close modal-book__btn" data-modal-close>X</button>
   <img
@@ -41,7 +41,7 @@ function createMarkupModal({ book_image, title, description, _id }) {
       </ul>
     </div>
   </div>
-
+  
 `;
   }
 
