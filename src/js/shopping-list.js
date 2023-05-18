@@ -2,6 +2,8 @@ import { getTopBooks } from './main-fetch.js';
 
 const drawList = async () => {
   const container = document.querySelector('.shopping-list');
+
+
   const data = await getTopBooks();
   //const data = JSON.parse(localStorage.getItem('shopping-list'));
 
@@ -32,7 +34,7 @@ const drawList = async () => {
           <div class="shopping-content">
 
             <button class="remove-button">
-            <img class="remove-icon" src="${require('../images/shopping-list/sprite.svg')}" alt=''>
+             <img class="remove-icon" src="${require('../images/shopping-list/remove-icon.svg')}" alt=''>
 
             </button>
             <div>
