@@ -19,7 +19,7 @@ export function handlerAllCategoryBooks(evt) {
   }
 
   allBooksTitle.textContent = '';
-  allBooks?.innerHTML = '';
+  allBooks.innerHTML = '';
 
   categoryBooks(evt.target.textContent);
 }

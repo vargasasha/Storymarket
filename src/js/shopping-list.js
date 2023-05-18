@@ -24,7 +24,7 @@ const drawList = async () => {
   const pageImg = document.querySelector('.page-link').getAttribute('src');
   const bookImg = document.querySelector('.book-link').getAttribute('src');
 
-  const dynamicElements = data[0].books.length? data[0].books
+  const dynamicElements = data[0].books.length ? data[0].books
     .slice(0, 3)
     .map(({ title, author, book_image, description, buy_links, list_name }) => {
       const links = `
