@@ -20,14 +20,13 @@ function allBooksCklick(evt) {
 }
 
 export function handlerAllCategoryBooks(evt) {
-  // evt.preventDefault();
-
   if (
     evt.target.nodeName !== 'A' ||
     evt.target.textContent === 'All category'
   ) {
     return;
   }
+  evt.preventDefault();
 
   allBooksTitle.textContent = '';
   allBooks.innerHTML = '';
@@ -39,7 +38,7 @@ function cardMarkup(array) {
   return array
     .map(
       ({ book_image, title, author, _id }) =>
-        `<li class="category-item" id="${_id}">
+        `<li class="category-item js-modal-item" id="${_id}">
         <a href="">
           <div class="book-card-wrap">
             <img src="${book_image}" alt="${title}" />

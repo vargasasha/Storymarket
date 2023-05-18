@@ -29,7 +29,7 @@ img {
     height: auto;
 }
 
-// Глобальні стилі 
+// Глобальні стилі
 
 body {
     display: flex;
@@ -65,10 +65,14 @@ body {
 
     @media screen and (min-width: 1440px) {
         display: flex;
-        gap: 40px;
+        gap: 20px;
     }
 }
 
+
+.w-full {
+    width: 100%;
+}
 .aside {
     padding-top: 40px;
 
