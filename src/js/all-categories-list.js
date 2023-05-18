@@ -1,3 +1,4 @@
+import { all } from 'axios';
 import { getTopBooks } from './main-fetch';
 
 const allBooks = document.querySelector('.best-sellers');
@@ -5,12 +6,14 @@ let bookSize = getBookSize();
 
 getTopBooks().then(function (response) {
   // console.log('top book', response);
-  allBooks.innerHTML = renderMarkup(response);
+  if (response && allBooks)
+    allBooks.innerHTML = renderMarkup(response);
 });
 
 window.addEventListener('resize', function () {
   bookSize = getBookSize();
-  allBooks.innerHTML = renderMarkup(response);
+  // response — тут нет такой переменной
+  // allBooks.innerHTML = renderMarkup(response);
 });
 
 function getBookSize() {
