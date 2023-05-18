@@ -15,6 +15,16 @@
     // margin-left: 40px;
   }
 }
+
+.side-bar{
+  display: block;
+  @media screen and (max-width: 1440px) {
+    display: none !important;
+  }
+}
+
+
+
 .main-title {
   margin: 40px 0px;
   height: 38px;

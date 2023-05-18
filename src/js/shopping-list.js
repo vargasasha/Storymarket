@@ -66,7 +66,7 @@ const drawList = async () => {
         </li>
       `;
     })
-    .join('') :  `<div class="page-empty">
+    .join('') :  `<li class="page-empty">
         <h2 class="empty-description">
           This page is empty, add some books and proceed to order.
         </h2>
@@ -75,8 +75,9 @@ const drawList = async () => {
           src="./images/shopping-list/books.png"
           alt="books"
         />
-      </div>`;
+      </li>`;
 
+      console.log("🚀 ~ file: shopping-list.js:81 ~ drawList ~ dynamicElements:", dynamicElements)
   container.innerHTML = dynamicElements;
 
   const removeButtons = document.querySelectorAll('.remove-button');
