@@ -8,7 +8,7 @@ bookListEl.addEventListener('click', onOpenModal);
 
 async function onOpenModal(event) {
   event.preventDefault();
-  if (event.target.nodeName !== 'IMG') return;
+  // if (event.target.nodeName !== 'IMG') return;
   const bookId = event.target.closest('.category-item').id;
   try {
     const bookData = await getBookById(bookId);

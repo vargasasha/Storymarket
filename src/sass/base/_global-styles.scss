@@ -29,7 +29,7 @@ img {
     height: auto;
 }
 
-// Глобальні стилі 
+// Глобальні стилі
 
 body {
     display: flex;
@@ -69,6 +69,10 @@ body {
     }
 }
 
+
+.w-full {
+    width: 100%;
+}
 .aside {
     padding-top: 40px;
 
