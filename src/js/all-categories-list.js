@@ -31,7 +31,10 @@ function renderMarkup(data) {
     const innerMarkup = slicedBooks.map(book => {
       return `
       <li class="best-sellers__item">
+      <div class="card-wrap">
         <img class="best-sellers__img" src="${book.book_image}" alt="" />
+        <p class="card">quick view</p>
+        </div>
         <h3 class="best-sellers__name">${book.title}</h3>
         <p class="best-sellers__author">${book.author}</p>
       </li>
