@@ -148,10 +148,11 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #111111;
+
 }
 @media screen and (max-width: 767px) {
   .shopping-title {
-    margin: 0;
+    margin-right: 20px;
   }
 }
 .shopping-category {
