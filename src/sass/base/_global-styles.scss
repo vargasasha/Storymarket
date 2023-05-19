@@ -80,5 +80,42 @@ body {
 }
 
 .global-dark-theme {
-//   background-color: black;
+  background-color: #202024;
+  color: #ffffff;
 }
+
+.global-dark-theme .header-container {
+  background-color: #202024;
+  border: 1.5px solid #fff;
+  color: #f4f3f3;
+  fill: #f4f3f3;
+}
+
+
+.global-dark-theme .site-nav__link_active {
+  color: #f4f3f3;
+  fill: #f4f3f3;
+}
+
+.global-dark-theme .site-nav__link {
+  color: #f4f3f3;
+  fill: #f4f3f3;
+}
+
+.global-dark-theme .header-logo-link {
+  color: #f4f3f3;
+  fill: #f4f3f3;
+}
+
+.global-dark-theme .main {
+  color: #f4f3f3;
+  fill: #f4f3f3;
+}
+.global-dark-theme .category__link {
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.global-dark-theme .best-sellers-title {
+  color: #fff;
+}
+
