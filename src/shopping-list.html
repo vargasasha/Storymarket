@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <!-- <link
+      rel="basket icon"
+      type="image/x-icon"
+      href="images/shopping-list/sprite.svg"
+    /> -->
+    <script type="module" src="./shopping-list.js"></script>
+  </head>
+  <body>
+    <include src="./partials/header.html"></include>
+    <main>
+      <div class="container-shopping container main-container">
+        <div class="flex-wrap side-bar">
+          <include src="./partials/support-bar.html"></include>
+        </div>
+        <div class="w-full">
+          <h1 class="main-title">
+            Shopping <span class="log-list">List</span>
+          </h1>
+          <ul class="shopping-list"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
