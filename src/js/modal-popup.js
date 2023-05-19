@@ -11,24 +11,29 @@ allBooksCategory.addEventListener('click', onOpenModal);
 async function onOpenModal(event) {
   event.preventDefault();
 
-
   // if (event.target.nodeName !== 'IMG') return;
   let bookId;
 
   if (event.target.closest('.js-modal-item').id) {
     bookId = event.target.closest('.js-modal-item').id;
-   
-  } 
+  }
 
   try {
     const bookData = await getBookById(bookId);
+
+    console.log(bookData);
+
     createMarkupModal(bookData);
   } catch (error) {
     console.log(error);
   }
 }
 
-function createMarkupModal({ book_image, title, description, _id }) {
+function createMarkupModal({ book_image, title, author, description, _id }) {
+  if (description === '') {
+    description = 'No description';
+  }
+
   const markup = mark();
   function mark() {
     return ` 
@@ -38,20 +43,20 @@ function createMarkupModal({ book_image, title, description, _id }) {
   <img
     class="book-card__img"
     src="${book_image}"
-    width="375px"
-    height="468px"
+
     alt="book__img"
   />
       <div class="book-card__about">
       <h3 class="book-card__title">${title}</h3>
+      <p class="book-card__author">${author}</p>
       <p class="book-card__desc">
        ${description}
       </p>
     </div>
   </div>
-  <ul class="book-add__btn">
-        <li><button class="book-add__watched modal-book__btn" id=${_id}>add to Watched</button></li>
-      </ul>
+
+  <button class="book-add__watched modal-book__btn" id=${_id}>Add to shopping list</button>
+      
    </div>           
 `;
   }
