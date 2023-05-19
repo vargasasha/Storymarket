@@ -1,4 +1,3 @@
-
 .modal-backdrop {
   &.active {
     height: 100%;
@@ -7,15 +6,12 @@
     top: 0px;
     left: 0px;
   }
-
-  
-
 }
 
 .modal-container {
   position: absolute;
   left: 50%;
-  top: 550px;
+  top: 40%;
   transform: translate(-50%, -50%) scale(1);
   background-color: #fff;
   width: 100%;
@@ -41,6 +37,7 @@
 }
 
 .book-card__modal {
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -63,11 +60,12 @@
     width: 192px;
     height: 281px;
     margin-right: 24px;
+    margin-bottom: 0px;
   }
 }
 
 .book-card__title {
-  font-family: 'DM Sans';
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.12;
@@ -77,19 +75,39 @@
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
-    line-height: 1.16;
+    line-height: 1.17;
+    margin-bottom: 8px;
+  }
+}
+
+.book-card__author {
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+  color: #b4afaf;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.29;
+    margin-bottom: 20px;
   }
 }
 
 .book-card__des {
-  font-family: 'DM Sans';
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.12;
+  line-height: 1.29;
   letter-spacing: -0.04em;
   color: #111111;
-  min-height: 50px;
+
+
+
 }
 
 .modal-content {
@@ -99,17 +117,38 @@
     padding: 40px;
   }
 }
-.book-add__watched{
+.book-add__watched {
   display: block;
-    margin: 0 auto;
-    width: 100px;
-    height: 35px;
-    background-color: #4f2ee8;
-    border: solid 1px #4f2ee8;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-weight: 600;
-    font-size: 14px;
-    color: #fff;
-    cursor: pointer;
+  margin: 0 auto;
+  width: 211px;
+  height: 46px;
+  border: solid 2px #4f2ee8;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  background-color: #fff;
+  color: #111111;
+  cursor: pointer;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+   width: 100%;
+  }
+
 }
+
+// .book-add__watched{
+
+//   display: block;
+//     margin: 0 auto;
+//     width: 100%;
+//     height: 35px;
+//     border: solid 1px #4f2ee8;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     font-weight: 600;
+//     font-size: 14px;
+//     color: #fff;
+//     cursor: pointer;
+// }
