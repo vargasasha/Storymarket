@@ -6,11 +6,10 @@ let bookSize = getBookSize();
 getTopBooks().then(function (response) {
   // console.log('top book', response);
   allBooks.innerHTML = renderMarkup(response);
-});
-
-window.addEventListener('resize', function () {
-  bookSize = getBookSize();
-  allBooks.innerHTML = renderMarkup(response);
+  window.addEventListener('resize', function () {
+    bookSize = getBookSize();
+    allBooks.innerHTML = renderMarkup(response);
+  });
 });
 
 function getBookSize() {
@@ -31,7 +30,10 @@ function renderMarkup(data) {
     const innerMarkup = slicedBooks.map(book => {
       return `
       <li class="best-sellers__item js-modal-item" id="${book._id}">
+      <div class="card-wrap">
         <img class="best-sellers__img" src="${book.book_image}" alt="" />
+        <p class="card">quick view</p>
+        </div>
         <h3 class="best-sellers__name">${book.title}</h3>
         <p class="best-sellers__author">${book.author}</p>
       </li>
