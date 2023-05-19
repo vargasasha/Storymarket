@@ -35,6 +35,7 @@
   letter-spacing: -0.04em;
   color: $primary-text-color;
   margin-bottom: 40px;
+  margin-top: 40px;
 
   @media screen and (min-width: $tablet) {
     font-size: 48px;
@@ -50,6 +51,7 @@
   line-height: 1.19;
   letter-spacing: -0.04em;
   color: $text-accent-color;
+  
 
   @media screen and (min-width: $tablet) {
     font-size: 48px;
@@ -59,6 +61,10 @@
 
 .category-item {
   margin-bottom: 40px;
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
 
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 50px) / 3);
