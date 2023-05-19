@@ -101,6 +101,11 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+    .support {
+        margin-top: 40px;
+    }
+}
 
 
 @media (max-width: 767px) {
@@ -112,6 +117,3 @@
     }
 }
 
-// .support__item:not(:last-child) {
-//     margin-bottom: 20px;
-// }
