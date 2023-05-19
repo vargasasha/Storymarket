@@ -5,6 +5,6 @@ import '../src/js/support-bar';
 import '../src/js/books-list';
 import '../src/js/markup-list-category';
 import '../src/js/modal-popup';
-import '../src/js/shopping-list';
+// import '../src/js/shopping-list';
 import '../src/js/theme-switcher';
 

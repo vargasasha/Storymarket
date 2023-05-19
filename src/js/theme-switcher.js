@@ -1,26 +1,41 @@
-let changeThemeButtons = document.querySelectorAll('.changeTheme'); 
+let changeThemeButtons = document.querySelectorAll('.changeTheme');
+const check = document.querySelector('.toggle-theme');
+const body = document.querySelector('body');
+console.log(body);
 
 changeThemeButtons.forEach(button => {
-    button.addEventListener('click', function () { 
-        let theme = this.dataset.theme; 
-        applyTheme(theme); 
-    });
+  button.addEventListener('click', function () {
+    let theme = this.dataset.theme;
+    applyTheme(theme);
+  });
 });
 
-
 function applyTheme(themeName) {
-    document.querySelector('[title="theme"]').setAttribute('href', `sass/utils/_theme-${themeName}.scss`);
-    changeThemeButtons.forEach(button => {
-        button.style.display = 'block';
-    });
-    document.querySelector(`[data-theme="${themeName}"]`).style.display = 'none';
-    localStorage.setItem('theme', themeName);
+  changeThemeButtons.forEach(button => {
+    button.style.display = 'block';
+  });
+
+  localStorage.setItem('theme', themeName);
 }
 
-let activeTheme = localStorage.getItem('theme'); 
+let activeTheme = localStorage.getItem('theme');
 
-if(activeTheme === null || activeTheme === 'light') { 
-    applyTheme('light');
-} else if (activeTheme === 'dark') { 
-    applyTheme('dark');
+if (activeTheme === null || activeTheme === 'light') {
+  applyTheme('light');
+} else if (activeTheme === 'dark') {
+  applyTheme('dark');
+}
+
+check.addEventListener('click', onStyle);
+
+function onStyle(evt) {
+    const currentTheme = localStorage.getItem('theme')
+    console.log(currentTheme);
+    console.log(evt);
+    
+    if (currentTheme === null || currentTheme === 'light') {
+        body.classList.add('global-dark-theme');
+    } else if (currentTheme === 'dark') {
+      body.classList.remove('global-dark-theme');
+    }
 }
