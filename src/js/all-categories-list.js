@@ -6,11 +6,10 @@ let bookSize = getBookSize();
 getTopBooks().then(function (response) {
   // console.log('top book', response);
   allBooks.innerHTML = renderMarkup(response);
-});
-
-window.addEventListener('resize', function () {
-  bookSize = getBookSize();
-  allBooks.innerHTML = renderMarkup(response);
+  window.addEventListener('resize', function () {
+    bookSize = getBookSize();
+    allBooks.innerHTML = renderMarkup(response);
+  });
 });
 
 function getBookSize() {
